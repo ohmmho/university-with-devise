@@ -15,12 +15,12 @@
 
   <div class="col-md-8">
     <h3>Inspiración</h3>
-    <%= @img_sources %>
+
     <br>
     <ul class="list-unstyled">
       <% @zipped_dribbble.each do |item| %>
         <li>
-          <img href="<%= item[2] %>">
+          <img src="<%= item[2] %>">
           <a href="<%= item[1]%>"><%= item[0] %></a>
         </li>    
       <hr>

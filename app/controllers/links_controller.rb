@@ -27,11 +27,8 @@ class LinksController < ApplicationController
     @items = @doc.xpath('//item') 
     @items_title =  @items.xpath('//item//title').map{|title| title.inner_text}
     @items_link = @items.xpath('//item//link').map{|link| link.inner_text}
-    @img_sources = @items.xpath('//item//img').map{|img| img['src']}
-  
-
-    
-
+    @img_sources = @items.map{|item| Nokogiri::HTML(item.children[3].children[1].content).xpath("//img").first["src"]}
+binding.pry
     @items_title.zip(@items_link, @img_sources)
   end
 end
