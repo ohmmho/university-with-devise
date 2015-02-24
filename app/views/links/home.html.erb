@@ -17,8 +17,19 @@
     <h3>Inspiración</h3>
 
     <br>
+    <h4>Dribbble</h4>
     <ul class="list-group row">
       <% @zipped_dribbble[0..8].each do |item| %>
+        <li class= "list-group-item col-xs-4">
+          <img src="<%= item[2] %>" class="img-responsive">
+          <a href="<%= item[1]%>"><%= item[0] %></a>
+        </li>    
+      <% end %> 
+    </ul>
+    <br>
+    <h4>Ffffound</h4>
+    <ul class="list-group row">
+      <% @zipped_ffffound[0..8].each do |item| %>
         <li class= "list-group-item col-xs-4">
           <img src="<%= item[2] %>" class="img-responsive">
           <a href="<%= item[1]%>"><%= item[0] %></a>
