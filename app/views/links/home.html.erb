@@ -37,5 +37,26 @@
       <% end %> 
     </ul>
 
+    <h4>Behance</h4>
+    <ul class="list-group row">
+      <% @zipped_behance[0..8].each do |item| %>
+        <li class= "list-group-item col-xs-4">
+          <img src="<%= item[2] %>" class="img-responsive">
+          <a href="<%= item[1]%>"><%= item[0] %></a>
+        </li>    
+      <% end %> 
+    </ul>
+
+
+    <br>
+    <h4>Awwwards</h4>
+    <ul class="list-group row">
+      <% @zipped_awwwards[0..8].each do |item| %>
+        <li class= "list-group-item col-xs-4">
+          <img src="<%= item %>" class="img-responsive" >
+        </li>    
+      <% end %> 
+    </ul>
+
 
 </div>

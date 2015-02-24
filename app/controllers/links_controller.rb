@@ -4,11 +4,10 @@ class LinksController < ApplicationController
     @zipped_tago = import_rss('http://www.tagoartwork.com/feed/')
     @zipped_dribbble = import_rss_dribbble('https://dribbble.com/shots/popular.rss')
     @zipped_ffffound = import_rss_ffffound('http://feeds.feedburner.com/ffffound/everyone')
+    @zipped_awwwards = import_rss_awwwards('http://feeds.feedburner.com/awwwards-sites-of-the-day')
+    @zipped_behance = import_rss_behance('https://www.behance.net/feeds/projects')
   end
 
-  def import_rss
-
-  end
 
 
   private
@@ -35,11 +34,43 @@ class LinksController < ApplicationController
     @items = @doc.xpath('//item') 
     @items_title =  @items.xpath('//item//title').map{|title| title.inner_text}
     @items_link = @items.xpath('//item//link').map{|link| link.inner_text}
-    @items_sources2 = @items.xpath('//item//description').map{ |img|  Nokogiri::HTML(img.inner_text).xpath("//img").first["src"] }
+    @items_sources2 = @items.xpath('//item//description').map{ |img| Nokogiri::HTML(img.inner_text).xpath("//img").first["src"] }
     @items_title.zip(@items_link, @items_sources2)
+  end
+
+  def import_rss_behance(url)
+    @doc = Nokogiri::XML(open(url))
+    @behance_i = @doc.xpath('//item')
+    @behance_title = @behance_i.xpath('//item//title').map{|title|title.inner_text}
+    @behance_link = @behance_i.xpath('//item//link').map{|title|title.inner_text}
+    @behance_img = @behance_i.xpath('//item//description').map{ |img| Nokogiri::HTML(img.inner_text).xpath("//img").first["src"] }
+    @behance_title.zip(@behance_link, @behance_img)
+  end
+
+  def import_rss_awwwards(url)
+    @doc = Nokogiri::HTML(open(url))
+    @items = @doc.xpath('//item') 
+    # links = @doc.xpath('//@href').map(&:value)
+    # @items_title2 =  @items.xpath('//item//title').map{|title| title.inner_text}
+    # @items_link = @doctml.css('h4.itemtitle a').map { |link| link['href'] }
+    @items_img = @items.children[3].children[1].xpath('//img').map{ |item| item['src'] }
+
+    # @items_link2.zip(@items_img)
+    # @items_title.zip(@items_link, @items_img)
   end
 end
  
- # http://feeds.feedburner.com/ffffound/everyone
  # http://feeds.feedburner.com/awwwards-sites-of-the-day
  # https://www.behance.net/feeds/projects
+
+
+
+
+
+
+
+
+
+
+
+ 
