@@ -19,7 +19,7 @@
     <br>
     <ul class="list-unstyled">
       <% @zipped_dribbble.each do |item| %>
-        <li>
+        <li class= "">
           <img src="<%= item[2] %>">
           <a href="<%= item[1]%>"><%= item[0] %></a>
         </li>    
@@ -27,6 +27,17 @@
       <% end %> 
     </ul>
 
+
+  <div class="row">
+     <div class="col-xs-6 col-sm-4">
+          Level 1: .col-xs-4 .col-sm-6
+      </div>
+      <div class="col-xs-6 col-sm-4">
+          Level 2: .col-xs-4 .col-sm-6
+      </div>
+      <div class="col-xs-6 col-sm-4">
+          Level 3: .col-xs-4 .col-sm-6
+      </div>
   </div>
 
 
