@@ -17,28 +17,14 @@
     <h3>Inspiración</h3>
 
     <br>
-    <ul class="list-unstyled">
+    <ul class="list-group row">
       <% @zipped_dribbble.each do |item| %>
-        <li class= "">
-          <img src="<%= item[2] %>">
+        <li class= "list-group-item col-xs-4">
+          <img src="<%= item[2] %>" class="img-responsive">
           <a href="<%= item[1]%>"><%= item[0] %></a>
         </li>    
-      <hr>
       <% end %> 
     </ul>
-
-
-  <div class="row">
-     <div class="col-xs-6 col-sm-4">
-          Level 1: .col-xs-4 .col-sm-6
-      </div>
-      <div class="col-xs-6 col-sm-4">
-          Level 2: .col-xs-4 .col-sm-6
-      </div>
-      <div class="col-xs-6 col-sm-4">
-          Level 3: .col-xs-4 .col-sm-6
-      </div>
-  </div>
 
 
 </div>
