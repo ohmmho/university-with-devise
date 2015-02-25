@@ -7,7 +7,28 @@ ready = function() {
     console.log("stuff");    
     $(".dropdown-menu").show();
   });
+  $(document).on("click", function(event) {
+    $(".dropdown-menu").hide();
+  });
 };
 
 $(document).ready(ready);
 $(document).on('page:load', ready);
+
+var login_ready = function() {
+  $("#my_modal").hide();
+
+  $("#login").on("click", function(event) {
+    event.preventDefault();
+  
+    $("#my_modal").show();
+  });
+
+  $("#close").on("click", function(event) {
+    $("#my_modal").hide();
+  });
+};
+
+$(document).ready(login_ready);
+$(document).on('page:load', login_ready);
+
