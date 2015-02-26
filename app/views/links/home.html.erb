@@ -4,9 +4,9 @@
     <h3>Notícias</h3>
     <br>
     <ul class="list-unstyled">
-      <% @zipped_tago.each do |item| %>
+      <% @tagos.each do |tago| %>
         <li>
-          <a href="<%= item[1]%>"><%= item[0] %></a>
+          <a href="<%= tago.url%>"><%= tago.title %></a>
         </li>    
       <hr>
       <% end %> 
@@ -19,45 +19,45 @@
     <br>
     <h4>Dribbble</h4>
     <ul class="list-group row">
-      <% @zipped_dribbble[0..8].each do |item| %>
+      <% @dribles[0..8].each do |drible| %>
         <li class= "list-group-item col-xs-4">
-        <a href="<%= item[1]%>">
-          <img src="<%= item[2] %>" class="img-responsive">
-          <%= item[0] %></a>
+        <a href="drible.url">
+          <img src="<%= drible.img_url %>" class="img-responsive">
+          <%= drible.title %></a>
         </li>    
       <% end %> 
     </ul>
     <br>
+
     <h4>Ffffound</h4>
     <ul class="list-group row">
-      <% @zipped_ffffound[0..8].each do |item| %>
+      <% @founds[0..8].each do |found| %>
         <li class= "list-group-item col-xs-4">
-        <a href="<%= item[1]%>">
-          <img src="<%= item[2] %>" class="img-responsive">
-          <%= item[0] %></a>
+        <a href="<%= found.url %>">
+          <img src="<%= found.img_url %>" class="img-responsive">
+          <%= found.title %></a>
         </li>    
       <% end %> 
     </ul>
 
     <h4>Behance</h4>
     <ul class="list-group row">
-      <% @zipped_behance[0..8].each do |item| %>
+      <% @behances[0..8].each do |behance| %>
         <li class= "list-group-item col-xs-4">
-        <a href="<%= item[1]%>">
-          <img src="<%= item[2] %>" class="img-responsive">
-          <%= item[0] %></a>
+        <a href="<%= behance.url %>">
+          <img src="<%= behance.img_url %>" class="img-responsive">
+          <%= behance.title %></a>
         </li>    
       <% end %> 
     </ul>
 
-
-    <br>
+  
     <h4>Awwwards</h4>
     <ul class="list-group row">
-      <% @zipped_awwwards[0..8].each do |item| %>
+      <% @awards[0..8].each do |award| %>
         <li class= "list-group-item col-xs-4">
-          <a href="<%= item[0] %>">
-            <img src="<%= item[1] %>" class="img-responsive" >
+          <a href="<%= award.url %>">
+            <img src="<%= award.img_url %>" class="img-responsive" >
           </a>
         </li>    
       <% end %> 

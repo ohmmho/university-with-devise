@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+gem 'whenever', :require => false
 #Bootstrap gem
 gem 'bootstrap-sass', '~> 3.3.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -22,7 +22,11 @@ ActiveRecord::Schema.define(version: 20150225114239) do
   end
 
   create_table "links", force: :cascade do |t|
+    t.string   "brand"
+    t.string   "title"
+    t.string   "img_url"
     t.string   "url"
+    t.boolean  "clicked",    default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
