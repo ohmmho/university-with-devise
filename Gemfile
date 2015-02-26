@@ -36,8 +36,12 @@ gem 'pundit'
 
 gem 'pry-rails'
 gem 'pry-coolline'
-# gem 'mechanize'
+
+# To parse RSS
 gem 'nokogiri'
+
+# email format validator
+gem 'validates_email_format_of'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
