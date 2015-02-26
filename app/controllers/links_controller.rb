@@ -19,8 +19,7 @@ class LinksController < ApplicationController
     @items = @doc.xpath('//item') 
     @items_title =  @items.xpath('//item//title').map{|title| title.inner_text}
     @items_link = @items.xpath('//item//link').map{|link| link.inner_text}
-    @items_title.zip(@items_link)
-    
+    @items_title.zip(@items_link)    
   end
 
   def import_rss_dribbble(url)
@@ -51,7 +50,7 @@ class LinksController < ApplicationController
   end
 
 
-# FIXME => not finding titles, but whatever
+# FIXME => not finding titles, but whatever: is almost working :D
 
   def import_rss_awwwards(url)
     @doc = Nokogiri::HTML(open(url))
