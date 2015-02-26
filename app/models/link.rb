@@ -4,5 +4,7 @@ class Link < ActiveRecord::Base
   has_many :users, through: :clicked_links
   has_many :clicked_links
   
+  
+  
 end
 

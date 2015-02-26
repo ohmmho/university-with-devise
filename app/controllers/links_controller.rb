@@ -11,6 +11,9 @@ class LinksController < ApplicationController
 
 
   private
+
+  # OPTIMIZE  => need to refactor these methods 
+
   def import_rss(url)
     @doc = Nokogiri::XML(open(url))
     @items = @doc.xpath('//item') 
@@ -47,21 +50,22 @@ class LinksController < ApplicationController
     @behance_title.zip(@behance_link, @behance_img)
   end
 
+
+# FIXME => not finding titles, but whatever
+
   def import_rss_awwwards(url)
     @doc = Nokogiri::HTML(open(url))
-    @items = @doc.xpath('//item') 
-    # links = @doc.xpath('//@href').map(&:value)
-    # @items_title2 =  @items.xpath('//item//title').map{|title| title.inner_text}
-    # @items_link = @doctml.css('h4.itemtitle a').map { |link| link['href'] }
-    @items_img = @items.children[3].children[1].xpath('//img').map{ |item| item['src'] }
+    @awards_i = @doc.xpath('//item') 
+    @awards_link = @awards_i.xpath('//item//link').map {|link| link.next_sibling}
+    @awards_img = @awards_i.children[3].children[1].xpath('//img').map{ |item| item['src'] }
 
-    # @items_link2.zip(@items_img)
-    # @items_title.zip(@items_link, @items_img)
+    @awards_link.zip(@awards_img)
+
+  
   end
 end
  
- # http://feeds.feedburner.com/awwwards-sites-of-the-day
- # https://www.behance.net/feeds/projects
+ 
 
 
 

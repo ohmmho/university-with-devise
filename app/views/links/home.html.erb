@@ -21,8 +21,9 @@
     <ul class="list-group row">
       <% @zipped_dribbble[0..8].each do |item| %>
         <li class= "list-group-item col-xs-4">
+        <a href="<%= item[1]%>">
           <img src="<%= item[2] %>" class="img-responsive">
-          <a href="<%= item[1]%>"><%= item[0] %></a>
+          <%= item[0] %></a>
         </li>    
       <% end %> 
     </ul>
@@ -31,8 +32,9 @@
     <ul class="list-group row">
       <% @zipped_ffffound[0..8].each do |item| %>
         <li class= "list-group-item col-xs-4">
+        <a href="<%= item[1]%>">
           <img src="<%= item[2] %>" class="img-responsive">
-          <a href="<%= item[1]%>"><%= item[0] %></a>
+          <%= item[0] %></a>
         </li>    
       <% end %> 
     </ul>
@@ -41,8 +43,9 @@
     <ul class="list-group row">
       <% @zipped_behance[0..8].each do |item| %>
         <li class= "list-group-item col-xs-4">
+        <a href="<%= item[1]%>">
           <img src="<%= item[2] %>" class="img-responsive">
-          <a href="<%= item[1]%>"><%= item[0] %></a>
+          <%= item[0] %></a>
         </li>    
       <% end %> 
     </ul>
@@ -53,7 +56,9 @@
     <ul class="list-group row">
       <% @zipped_awwwards[0..8].each do |item| %>
         <li class= "list-group-item col-xs-4">
-          <img src="<%= item %>" class="img-responsive" >
+          <a href="<%= item[0] %>">
+            <img src="<%= item[1] %>" class="img-responsive" >
+          </a>
         </li>    
       <% end %> 
     </ul>
