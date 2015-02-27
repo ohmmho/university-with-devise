@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get '/register', to: 'sessions#new'
   post '/register', to: 'sessions#create'
-
+  get "/leaving_now/:url_id", to: "links#clicked", as: :leaving
 
   post '/login', to: 'sessions#login'
   delete '/logout', to: 'sessions#logout'

@@ -9,7 +9,13 @@ class LinksController < ApplicationController
     @awards = @links.select {|award| award.brand == "awwwards"}
   end
 
+  def clicked
+    link = Link.find(params[:url_id])
+    current_user.links << link
+    redirect_to link.url
+  end
 
+  
 
 end
  

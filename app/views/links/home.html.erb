@@ -6,8 +6,8 @@
     <ul class="list-unstyled">
       <% @tagos.each do |tago| %>
         <li>
-          <a href="<%= tago.url%>"><%= tago.title %></a>
-        </li>    
+          <%= link_to( tago.title, leaving_path(tago.id) ) %>
+        </li>
       <hr>
       <% end %> 
     </ul>

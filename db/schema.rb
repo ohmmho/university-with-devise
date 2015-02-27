@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150227121517) do
+ActiveRecord::Schema.define(version: 20150227184709) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 20150227121517) do
     t.integer  "user_id"
     t.integer  "link_id"
   end
+
+  add_index "clicked_links", ["link_id", "user_id"], name: "index_clicked_links_on_link_id_and_user_id", unique: true, using: :btree
 
   create_table "links", force: :cascade do |t|
     t.string   "brand"

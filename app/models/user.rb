@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
 
   validates :email, presence: true, email_format: { message: "doesn't look like an email address" }
 
+    
+
 end

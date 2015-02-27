@@ -4,7 +4,7 @@ class Link < ActiveRecord::Base
   has_many :users, through: :clicked_links
   has_many :clicked_links
 
-  validates :email, uniqueness: true
+  validates :url, uniqueness: true
 
 end
 
