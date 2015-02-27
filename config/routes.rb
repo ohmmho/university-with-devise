@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#login'
   delete '/logout', to: 'sessions#logout'
 
+  # post '/links/:link_id/clicked', to: 'clikedLinks#create'
+
   resources :users
 
 

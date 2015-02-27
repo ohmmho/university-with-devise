@@ -7,9 +7,6 @@ class LinksController < ApplicationController
     @founds = @links.select {|found| found.brand == "found"}
     @behances = @links.select {|behance| behance.brand == "behance"}
     @awards = @links.select {|award| award.brand == "awwwards"}
-    
-   
-  
   end
 
 

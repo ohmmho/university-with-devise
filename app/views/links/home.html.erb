@@ -21,7 +21,7 @@
     <ul class="list-group row">
       <% @dribles[0..8].each do |drible| %>
         <li class= "list-group-item col-xs-4">
-        <a href="drible.url">
+        <a href=" <%= drible.url %>">
           <img src="<%= drible.img_url %>" class="img-responsive">
           <%= drible.title %></a>
         </li>    
