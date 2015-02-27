@@ -3,7 +3,7 @@ require 'benchmark'
 require 'open-uri'
 
 namespace :linkseed do
-  desc "Seed cats database"
+  desc "Seed database of links"
   task seed_link_db: :environment do
     @doc = Nokogiri::XML(open('http://www.tagoartwork.com/feed/'))
     @items = @doc.xpath('//item') 

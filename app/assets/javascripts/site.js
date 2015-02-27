@@ -44,8 +44,8 @@ ready = function() {
   $(document).on("click", function(event) {
     $(".dropdown-menu").hide();
   });
-  login_ready();
   register_ready();
+  login_ready();
 };
 
 $(document).ready(ready);
