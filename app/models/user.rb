@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 
   has_secure_password
+  
   has_many :links, through: :clicked_links
   has_many :clicked_links
 

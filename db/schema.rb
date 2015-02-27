@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150225114239) do
+ActiveRecord::Schema.define(version: 20150227121517) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20150225114239) do
   create_table "clicked_links", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "link_id"
   end
 
   create_table "links", force: :cascade do |t|
@@ -26,7 +28,6 @@ ActiveRecord::Schema.define(version: 20150225114239) do
     t.string   "title"
     t.string   "img_url"
     t.string   "url"
-    t.boolean  "clicked",    default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
