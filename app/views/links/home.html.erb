@@ -13,55 +13,80 @@
     </ul>
   </div>
 
+
+
   <div class="col-md-8">
     <h3>Inspiración</h3>
 
-    <br>
-    <h4>Dribbble</h4>
-    <ul class="list-group row">
-      <% @dribles[0..8].each do |drible| %>
-        <li class= "list-group-item col-xs-4">
-        <a href=" <%= drible.url %>">
-          <img src="<%= drible.img_url %>" class="img-responsive">
-          <%= drible.title %></a>
-        </li>    
-      <% end %> 
-    </ul>
-    <br>
+   <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle-bis" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+      Nombre de la cosa
+    </button>
+    <ul class="dropdown-menu rss" id="dropdown-menu-links" role="menu" aria-labelledby="dropdownMenu1">
+ 
+      <li class="link-rss" role="presentation" id ="link1" data-type="1"><a role="menuitem" tabindex="-1" href="#">Dribbble</a></li>
+     
+      <li class="link-rss" role="presentation" id ="link2" data-type="2"><a role="menuitem" tabindex="-1" href="#">Ffffound</a></li>
+      <li class="link-rss" role="presentation" id ="link3" data-type="3"><a role="menuitem" tabindex="-1" href="#">Behance</a></li> 
+      <li class="link-rss" role="presentation" id ="link4" data-type="4"><a role="menuitem" tabindex="-1" href="#">Awwwards</a></li>
 
-    <h4>Ffffound</h4>
-    <ul class="list-group row">
-      <% @founds[0..8].each do |found| %>
-        <li class= "list-group-item col-xs-4">
-        <a href="<%= found.url %>">
-          <img src="<%= found.img_url %>" class="img-responsive">
-          <%= found.title %></a>
-        </li>    
-      <% end %> 
     </ul>
+  </div>
 
+
+
+
+    <div id="1" class="img-rss">
+      <h4>Dribbble</h4>
+      <ul class="list-group row">
+        <% @dribles[0..8].each do |drible| %>
+          <li class= "list-group-item col-xs-4">
+          <a href=" <%= drible.url %>">
+            <img src="<%= drible.img_url %>" class="img-responsive">
+            <%= drible.title %></a>
+          </li>    
+        <% end %> 
+      </ul>
+    </div>
+
+    <div id="2" class="img-rss">
+      <h4>Ffffound</h4>
+      <ul class="list-group row">
+        <% @founds[0..8].each do |found| %>
+          <li class= "list-group-item col-xs-4">
+          <a href="<%= found.url %>">
+            <img src="<%= found.img_url %>" class="img-responsive">
+            <%= found.title %></a>
+          </li>    
+        <% end %> 
+      </ul>
+    </div>
+
+    <div id="3" class="img-rss">
     <h4>Behance</h4>
-    <ul class="list-group row">
-      <% @behances[0..8].each do |behance| %>
-        <li class= "list-group-item col-xs-4">
-        <a href="<%= behance.url %>">
-          <img src="<%= behance.img_url %>" class="img-responsive">
-          <%= behance.title %></a>
-        </li>    
-      <% end %> 
-    </ul>
+      <ul class="list-group row">
+        <% @behances[0..8].each do |behance| %>
+          <li class= "list-group-item col-xs-4">
+          <a href="<%= behance.url %>">
+            <img src="<%= behance.img_url %>" class="img-responsive">
+            <%= behance.title %></a>
+          </li>    
+        <% end %> 
+      </ul>
+    </div>
 
-  
-    <h4>Awwwards</h4>
-    <ul class="list-group row">
-      <% @awards[0..8].each do |award| %>
-        <li class= "list-group-item col-xs-4">
-          <a href="<%= award.url %>">
-            <img src="<%= award.img_url %>" class="img-responsive" >
-          </a>
-        </li>    
-      <% end %> 
-    </ul>
+    <div id="4" class="img-rss">
+      <h4>Awwwards</h4>
+      <ul class="list-group row">
+        <% @awards[0..8].each do |award| %>
+          <li class= "list-group-item col-xs-4">
+            <a href="<%= award.url %>">
+              <img src="<%= award.img_url %>" class="img-responsive" >
+            </a>
+          </li>    
+        <% end %> 
+      </ul>
+    </div>
 
 
 </div>

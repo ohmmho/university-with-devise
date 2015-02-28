@@ -1,17 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
   <title> || university || </title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css">
+
+  <!-- MultiLevelPushMenu -->
+ <!--  <link rel="stylesheet" href="jquery.multilevelpushmenu.css" />
+  <link rel="stylesheet" href="bootstrap_integration.css" /> -->
+  <!-- end MultiLevelPushMenu -->
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body> 
-<%= render 'layouts/navbar' %>
-  <div class="container-fluid">
-    <%= yield %>
+<!-- navigation bar -->
+  <%= render 'layouts/navbar' %> 
+<!-- end navigation bar -->  
+
+<!-- MultiLevelPushMenu_HTML -->
+
+
+<!-- End MultiLevelPushMenu_HTML -->
+
+
+<!-- body -->
+<div class="container-fluid">
+  <div>
+    <div class="row">
+
+      <%= yield %>
+
+    </div>
   </div>
+</div>
+<!-- body's end -->
+
+
+
+<!--  JS scripts: MultiLevelPushMenu -->
+<script type="text/javascript" src="http://oss.maxcdn.com/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+
+<!-- <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+<script src="jquery.multilevelpushmenu.min.js"></script>
+
+<script type="text/javascript" src="bootstrap_integration.js"></script> -->
+<!-- JS scripts -->
 </body>
 </html>
 
