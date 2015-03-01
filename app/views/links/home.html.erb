@@ -1,15 +1,17 @@
 
 <div class="row">
   <div class="col-md-4">
-    <h3>Notícias</h3>
-     <div class="dropdown2">
-      <button class="btn btn-default dropdown-toggle-3" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-        Nombre de la cosa
-      </button>
+    <h3 class="titles-grid text-right">NOTÍCIAS </hr></h3>
+     <div class="dropdown2 centerd">
+     <nav class="cl-effect-6">
+      <a href="#" class="dropdown-toggle-3" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+       <h4 id="target-img"> TAGO ARTWORK </h4>
+      </a>
+      </nav>
 
       <ul class="dropdown-menu rss" id="dropdown-menu-links2" role="menu" aria-labelledby="dropdownMenu1">
     
-        <li class="link-rss" role="presentation" data-type=""><a role="menuitem" tabindex="-1" href="#">Tago</a></li>
+        <li class="link-rss" role="presentation" data-type="a"><a role="menuitem" tabindex="-1" href="#">Tago</a></li>
        
         <li class="link-rss" role="presentation" data-type="b"><a role="menuitem" tabindex="-1" href="#">Tago</a></li>
         <li class="link-rss" role="presentation" data-type="c"><a role="menuitem" tabindex="-1" href="#">Tago</a></li> 
@@ -20,8 +22,8 @@
 
     <br>
     <ul class="list-unstyled">
-      <% @tagos.each do |tago| %>
-        <li>
+      <% @tagos[0..7].each do |tago| %>
+        <li >
           <%= link_to( tago.title, leaving_path(tago.id) ) %>
         </li>
       <hr>
@@ -30,13 +32,14 @@
   </div>
 
   <div class="col-md-8">
-    <h3>Inspiración</h3>
+    <h3 class="titles-grid text-right">INSPIRACIÓN</h3>
 
-   <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle-bis" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-     <h4> <%= %> </h4>
-    </button>
-
+   <div class="dropdown centerd">
+      <nav class="cl-effect-6">
+        <a href="#" class="dropdown-toggle-bis" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+         <h4 id="target-img"> Nombre </h4>
+        </a>
+      </nav>
     <ul class="dropdown-menu rss" id="dropdown-menu-links" role="menu" aria-labelledby="dropdownMenu1">
  
       <li class="img-link-rss" role="presentation" id ="link1" data-type="1"><a role="menuitem" tabindex="-1" href="#">Dribbble</a></li>

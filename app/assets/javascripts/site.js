@@ -4,7 +4,7 @@
 
 
 
-// modal login
+// modal login & register
 var login_ready = function() {
   $("#my_modal").hide();
   console.log("stuff happening");
@@ -34,6 +34,7 @@ var register_ready = function() {
       $("#my_modal_reg").hide();
     });
 };
+
 // button menu dropdown 
 var nav_bar_ready = function () {
   $(".dropdown-toggle").on("click", function(event){
@@ -75,13 +76,16 @@ var show_rss_img = function() {
   $("li.img-link-rss").on("click", function(event){
     $('.img-rss').hide(); 
       switch($(this).data('type')){
-        case 1: $("#1").show(); break;
+        case 1: $("#1").show(); break;         
         case 2: $("#2").show(); break;
         case 3: $("#3").show(); break;
         case 4: $("#4").show(); break;
       };
    });
 };
+
+
+
 
 // rss change-show noticias
 
@@ -97,8 +101,8 @@ var site_ready = function() {
   register_ready();
   login_ready();
   nav_bar_ready();
-  dropdown_ready();
   dropdown_ready2();
+  dropdown_ready();
   show_rss_img();
 };
 
@@ -107,5 +111,6 @@ $(site_ready);
 // first step: listener al click de links
 // second step: get the value of the li
 // third step: hide all the divs that don't match the value and show the one that matches
+// $('#target-img').text('Dribbble'); break;
 
 
