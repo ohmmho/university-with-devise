@@ -33,6 +33,11 @@ a:hover, a:active {
 /*home grids rss elements*/
 .rss {
   margin:0px; 
+  background-color: #000;
+}
+
+.rss li > a{
+  color: #fff;
 }
 
 .img-grid {
@@ -90,9 +95,27 @@ a:hover, a:active {
   margin:0px;
 }
 
-.categorias .active a,
+.colored, 
+.categorias,
 .categorias .active a:hover {
     background-color: #0CC;
+    border-radius: 0px;
+    
+}
+
+
+
+.categorias a, {
+  color: #FFF;
+}
+
+.categorias a:hover, {
+  color: #0cc;
+}
+
+.title-spaced {
+  letter-spacing: 2px;
+
 }
 
 
