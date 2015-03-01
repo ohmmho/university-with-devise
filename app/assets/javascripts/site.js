@@ -45,7 +45,19 @@ var nav_bar_ready = function () {
   });
 };
 
-// button rss dropdown 
+//button link.rss dropdown
+
+var dropdown_ready2 = function () {
+  $(".dropdown-toggle-3").on("mouseover", function(event){
+    console.log("stuff from the linkrss");
+    $("#dropdown-menu-links2").show();
+  });
+  $("div.dropdown2").on("mouseleave", function(event) {
+    $("#dropdown-menu-links2").hide();
+  });
+};
+
+// button img.rss dropdown 
 var dropdown_ready = function () {
   $(".dropdown-toggle-bis").on("mouseover", function(event){
     console.log("stuff from the rss");
@@ -56,12 +68,11 @@ var dropdown_ready = function () {
   });
 };
 
-
-// rss change-show brand
+// rss change-show inspiración
 var show_rss_img = function() {
   $('.img-rss').hide();
   $('.img-rss').first().show();
-  $("li.link-rss").on("click", function(event){
+  $("li.img-link-rss").on("click", function(event){
     $('.img-rss').hide(); 
       switch($(this).data('type')){
         case 1: $("#1").show(); break;
@@ -72,6 +83,13 @@ var show_rss_img = function() {
    });
 };
 
+// rss change-show noticias
+
+var show_rss_links = function() {
+
+};  
+
+
 
 
 
@@ -80,6 +98,7 @@ var site_ready = function() {
   login_ready();
   nav_bar_ready();
   dropdown_ready();
+  dropdown_ready2();
   show_rss_img();
 };
 

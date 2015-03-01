@@ -4,8 +4,8 @@
 
 body { 
   padding-top: 70px; 
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .titulo_class{
@@ -16,4 +16,28 @@ body {
 .botoncito {
   margin-top: 50px;
   width: 150px;
+}
+
+.rss {
+  margin:0px; 
+}
+
+.img-grid {
+
+  width: 200px;
+  height: 150px;
+}
+
+.found-img {
+    position: relative;
+    float: left;
+    width:  200px;
+    height: 150px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+
+.list-grid {
+  border: 0px;
 }
