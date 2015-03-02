@@ -46,7 +46,7 @@ var dropdown_ready2 = function () {
   $("#dropdownMenu1").on("mouseover", function(event){
     $("#dropdown-menu-links2").show();
   });
-  $("#dropdownMenu1").on("mouseleave", function(event) {
+  $("div.dropdown").on("mouseleave", function(event) {
     $("#dropdown-menu-links2").hide();
   });
 };
@@ -61,7 +61,7 @@ var dropdown_ready = function () {
   });
 };
 
-var relax = function(){
+var change_name_rss = function(){
   var thing = $("#target-img1").text();
 }
 
@@ -102,7 +102,7 @@ var site_ready = function() {
   dropdown_ready2();
   dropdown_ready();
   show_rss_img();
-  relax();
+  change_name_rss();
 };
 
 $(site_ready);

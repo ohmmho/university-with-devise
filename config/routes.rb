@@ -14,10 +14,11 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#login'
   delete '/logout', to: 'sessions#logout'
 
+  get '/diseño', to: 'categories#diseño'
+
   # post '/links/:link_id/clicked', to: 'clikedLinks#create'
 
   resources :users
 
-  resources :categories, only: [:show]
 
 end

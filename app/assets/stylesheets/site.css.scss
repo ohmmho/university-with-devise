@@ -30,6 +30,9 @@ a:hover, a:active {
   width: 150px;
 }
 
+#register {
+  background-color: #0cc;
+}
 /*home grids rss elements*/
 .rss {
   margin:0px; 
@@ -79,7 +82,9 @@ a:hover, a:active {
 }
 
 .menu_icon {
-  height:40px;
+  height:45px;
+  margin:0px;
+  padding:0px;
 }
 
 .user {
@@ -118,4 +123,16 @@ a:hover, a:active {
 
 }
 
+/* category: DISEÑO */
+
+.publi-img {
+    background-image: url("/assets/UON.png");
+    position: relative;
+    float: left;
+    width:  200px;
+    height: 150px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+  }
 
