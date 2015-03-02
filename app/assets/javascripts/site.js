@@ -7,12 +7,9 @@
 // modal login & register
 var login_ready = function() {
   $("#my_modal").hide();
-  console.log("stuff happening");
-
   $("#login").on("click", function(event) {
     event.preventDefault();
     $("#my_modal").show();
-    console.log("stuff happening");
   });
 
   $(".close").on("click", function(event) {
@@ -22,12 +19,9 @@ var login_ready = function() {
 
 var register_ready = function() {
     $("#my_modal_reg").hide();
-    console.log("stuff happening");
-
     $("#register").on("click", function(event) {
       event.preventDefault();
       $("#my_modal_reg").show();
-      console.log("stuff happening");
     });
 
     $(".close").on("click", function(event) {
@@ -38,7 +32,6 @@ var register_ready = function() {
 // button menu dropdown 
 var nav_bar_ready = function () {
   $(".dropdown-toggle").on("click", function(event){
-    console.log("stuff");  
     $("#dropdown-menu-nav").show();
   });
   $(document).on("click", function(event) {
@@ -49,11 +42,11 @@ var nav_bar_ready = function () {
 //button link.rss dropdown
 
 var dropdown_ready2 = function () {
-  $(".dropdown-toggle-3").on("mouseover", function(event){
-    console.log("stuff from the linkrss");
+  $("#dropdown-menu-links2").hide();
+  $("#dropdownMenu1").on("mouseover", function(event){
     $("#dropdown-menu-links2").show();
   });
-  $("div.dropdown2").on("mouseleave", function(event) {
+  $("#dropdownMenu1").on("mouseleave", function(event) {
     $("#dropdown-menu-links2").hide();
   });
 };
@@ -61,7 +54,6 @@ var dropdown_ready2 = function () {
 // button img.rss dropdown 
 var dropdown_ready = function () {
   $(".dropdown-toggle-bis").on("mouseover", function(event){
-    console.log("stuff from the rss");
     $("#dropdown-menu-links").show();
   });
   $("div.dropdown").on("mouseleave", function(event) {
@@ -69,11 +61,17 @@ var dropdown_ready = function () {
   });
 };
 
+var relax = function(){
+  var thing = $("#target-img1").text();
+}
+
 // rss change-show inspiración
 var show_rss_img = function() {
   $('.img-rss').hide();
   $('.img-rss').first().show();
   $("li.img-link-rss").on("click", function(event){
+    var our_text = event.currentTarget.innerText;
+    $("#target-img1").text(our_text);
     $('.img-rss').hide(); 
       switch($(this).data('type')){
         case 1: $("#1").show(); break;         
@@ -104,6 +102,7 @@ var site_ready = function() {
   dropdown_ready2();
   dropdown_ready();
   show_rss_img();
+  relax();
 };
 
 $(site_ready);

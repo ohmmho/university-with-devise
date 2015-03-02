@@ -2,14 +2,14 @@
 <div class="row">
   <div class="col-md-4">
     <h3 class="titles-grid text-left">NOTÍCIAS </hr></h3>
-     <div class="dropdown2 centerd">
-     <nav class="cl-effect-6">
-      <a href="#" class="dropdown-toggle-3" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-       <h4 id="target-img"> TAGO ARTWORK </h4>
-      </a>
-      </nav>
+     <div class="dropdown centered">
+       <nav class="cl-effect-6">
+          <a href="#" class="dropdown-toggle-3" type="button" id="dropdownMenu1">
+           <h4 id="target-img"> TAGO ARTWORK </h4>
+          </a>
+        </nav>
 
-      <ul class="dropdown-menu rss" id="dropdown-menu-links2" role="menu" aria-labelledby="dropdownMenu1">
+      <ul class="dropdown-menu rss" id="dropdown-menu-links2">
     
         <li class="link-rss" role="presentation" data-type="a"><a role="menuitem" tabindex="-1" href="#">Tago</a></li>
        
@@ -19,7 +19,7 @@
 
       </ul>
     </div>
-
+  
     <br>
     <ul class="list-unstyled">
       <% @tagos[0..7].each do |tago| %>
@@ -36,27 +36,26 @@
 
    <div class="dropdown centerd">
       <nav class="cl-effect-6">
-        <a href="#" class="dropdown-toggle-bis" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-         <h4 id="target-img"> Nombre </h4>
+        <a href="#" class="dropdown-toggle-bis" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">
+         <h4 id="target-img1"> Nombre </h4>
         </a>
       </nav>
     <ul class="dropdown-menu rss" id="dropdown-menu-links" role="menu" aria-labelledby="dropdownMenu1">
  
-      <li class="img-link-rss" role="presentation" id ="link1" data-type="1"><a role="menuitem" tabindex="-1" href="#">Dribbble</a></li>
+      <li class="img-link-rss title-spaced text-center" role="presentation" id ="link1" data-type="1"><a role="menuitem" tabindex="-1" href="#">DRIBBBLE</a></li>
      
-      <li class="img-link-rss" role="presentation" id ="link2" data-type="2"><a role="menuitem" tabindex="-1" href="#">Ffffound</a></li>
-      <li class="img-link-rss" role="presentation" id ="link3" data-type="3"><a role="menuitem" tabindex="-1" href="#">Behance</a></li> 
-      <li class="img-link-rss" role="presentation" id ="link4" data-type="4"><a role="menuitem" tabindex="-1" href="#">Awwwards</a></li>
+      <li class="img-link-rss title-spaced text-center" role="presentation" id ="link2" data-type="2"><a role="menuitem" tabindex="-1" href="#">FFFFOUND</a></li>
+      <li class="img-link-rss title-spaced text-center" role="presentation" id ="link3" data-type="3"><a role="menuitem" tabindex="-1" href="#">BEHANCE</a></li> 
+      <li class="img-link-rss title-spaced text-center" role="presentation" id ="link4" data-type="4"><a role="menuitem" tabindex="-1" href="#">AWWWARDS</a></li>
 
     </ul>
   </div>
 
     <div id="1" class="img-rss">
-      <h4>Dribbble</h4>
-      <ul class="list-group row">
+      <ul class="list-group row ">
         <% @dribles[0..8].each do |drible| %>
           <li class= "list-group-item list-grid col-xs-4">
-          <a href=" <%= drible.url %>">
+          <a href=" <%= leaving_path(drible.id) %>">
             <img src="<%= drible.img_url %>" class="img-responsive center-block img-grid">
            </a>
           </li>    
@@ -65,11 +64,10 @@
     </div>
 
     <div id="2" class="img-rss">
-      <h4>Ffffound</h4>
       <ul class="list-group row">
         <% @founds[0..8].each do |found| %>
           <li class= "list-group-item list-grid col-xs-4">
-          <a href="<%= found.url %>"> <div class="found-img center-block" style="background-image:url('<%= found.img_url %>');"></div>
+          <a href="<%= leaving_path(found.id) %>"> <div class="found-img center-block" style="background-image:url('<%= found.img_url %>');"></div>
            
             </a>
           </li>    
@@ -78,11 +76,10 @@
     </div>
 
     <div id="3" class="img-rss">
-    <h4>Behance</h4>
       <ul class="list-group row">
         <% @behances[0..8].each do |behance| %>
           <li class= "list-group-item list-grid col-xs-4">
-          <a href="<%= behance.url %>">
+          <a href="<%= leaving_path(behance.id) %>">
             <img src="<%= behance.img_url %>" class="img-responsive center-block img-grid">
             </a>
           </li>    
@@ -91,17 +88,16 @@
     </div>
 
     <div id="4" class="img-rss">
-      <h4>Awwwards</h4>
       <ul class="list-group row">
         <% @awards[0..8].each do |award| %>
           <li class= "list-group-item list-grid col-xs-4">
-            <a href="<%= award.url %>">
+            <a href="<%= leaving_path(award.id) %>">
               <img  src="<%= award.img_url %>" class="img-responsive center-block img-grid" >
             </a>
           </li>    
         <% end %> 
       </ul>
     </div>
-
+  
 
 </div>

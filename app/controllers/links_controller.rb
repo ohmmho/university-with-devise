@@ -1,18 +1,20 @@
 class LinksController < ApplicationController
 
   def home  
-    @links = Link.all
+    
     @tagos = Link.where(brand: "tago").limit(10).order("created_at desc")
-    #@tagos = @links.select{ |tago| tago.brand == "tago"}
-    @dribles = @links.select { |drible| drible.brand == "drible"}
-    @founds = @links.select {|found| found.brand == "found"}
-    @behances = @links.select {|behance| behance.brand == "behance"}
-    @awards = @links.select {|award| award.brand == "awwwards"}
+    @dribles = Link.where(brand: "drible").limit(10).order("created_at desc")
+    @founds = Link.where(brand: "found").limit(10).order("created_at desc")
+    @behances = Link.where(brand: "behance").limit(10).order("created_at desc")
+    @awards = Link.where(brand: "awwwards").limit(10).order("created_at desc")
+    
   end
 
   def clicked
     link = Link.find(params[:url_id])
-    current_user.links << link
+    unless ClickedLink.where(user_id: current_user.id, link_id: link.id).exists?
+      current_user.links << link
+    end
     redirect_to link.url
   end
 
