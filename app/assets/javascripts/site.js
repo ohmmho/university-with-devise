@@ -105,7 +105,10 @@ var site_ready = function() {
   change_name_rss();
 };
 
-$(site_ready);
+
+
+$(document).ready(site_ready);
+$(document).on("page:load", ready);
 
 // first step: listener al click de links
 // second step: get the value of the li
