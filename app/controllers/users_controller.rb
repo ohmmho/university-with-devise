@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   def show
 
     @user = User.find(params[:id])
-    @list_of_seenlinks = @user.links.order("created_at desc")
+    @list_of_seenlinks = @user.clicked_links.order("created_at desc").includes(:link)
     # @date_links = clicked_links.where(user_id: @user.id).first.created_at.strftime("%B %d, %Y")
 
   end

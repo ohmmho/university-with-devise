@@ -118,7 +118,7 @@ $('#particles').particleground({
 
 
 var site_ready = function() {
-  register_ready();
+  
   login_ready();
   nav_bar_ready();
   dropdown_ready2();

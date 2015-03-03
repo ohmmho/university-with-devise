@@ -31,6 +31,17 @@ a:hover, a:active {
   margin-top: 120px;
 }
 
+.btn-bai {
+  background-color: #0CC;
+  color: #fff;
+}
+
+
+.btn-bai:hover {
+  background-color: #fff !important;
+  border: 1px solid #0CC;
+  color: #0CC;
+}
 
 #register {
   background-color: #fff;
