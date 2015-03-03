@@ -3,8 +3,14 @@ class UsersController < ApplicationController
   def show
 
     @user = User.find(params[:id])
-    @list_of_seenlinks = @user.clicked_links.order("created_at desc").includes(:link)
-    # @date_links = clicked_links.where(user_id: @user.id).first.created_at.strftime("%B %d, %Y")
+    list_of_seenlinks = @user.clicked_links.order("created_at desc").includes(:link)
+
+    @datehash = {}
+
+    list_of_seenlinks.each do |clicked_link|
+      @datehash[clicked_link.created_at.strftime("%B %Y, %d")] ||= []
+      @datehash[clicked_link.created_at.strftime("%B %Y, %d")] << clicked_link
+    end
 
   end
 

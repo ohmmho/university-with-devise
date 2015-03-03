@@ -1,9 +1,11 @@
 <h2>Hello <%= @user.email %></h2>
 <hr class="black-line">
 <ul class="list-unstyled">
-  <% @list_of_seenlinks.each do |clicked_link| %>
-    <ul class="date list-unstyled"> <%= link = clicked_link.link %> 
-    <li> <%= link_to(link.url, link.url) %> </li>
+  <% @datehash.each do |date, array_links| %>
+    <ul class="date list-unstyled"> <%= date %>
+    <% array_links.each do |clicked_link| %>
+    <li> <%= link_to(clicked_link.link.url, clicked_link.link.url) %> </li>
+    <% end %>
   <% end %>
 
 </ul>
