@@ -12,6 +12,11 @@ class SessionsController < ApplicationController
     else
       render :register
     end
+
+    rescue ActiveRecord::RecordNotUnique
+      @user.errors.add(:email, "Este email ya existe")
+
+      render :new
   end
 
   def login
@@ -19,20 +24,21 @@ class SessionsController < ApplicationController
 
     # Session engaged
     if user && user.authenticate(params[:password])
-      flash[:success] = "Login sucessful! Welcome #{user.email}!"
 
       session[:current_user_id] = user.id
     else
-      flash[:error] = "Login was not sucessful"
+      flash[:error] = "Email o contraseña incorrectas"
     end
 
     redirect_to "/"
   end
+
   def logout
     session[:current_user_id] = nil
 
     redirect_to "/"
   end
+
   private
 
   def user_params

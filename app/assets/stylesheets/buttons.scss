@@ -1,3 +1,4 @@
+
 *,
 *:after,
 *::before {
@@ -23,6 +24,7 @@
 
 .cl-effect-6 a::before {
   position: absolute;
+  background: #0CC;
   top: 0;
   left: 0;
   width: 100%;

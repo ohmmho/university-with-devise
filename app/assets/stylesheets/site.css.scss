@@ -31,25 +31,24 @@ a:hover, a:active {
   margin-top: 120px;
 }
 
-.botoncito {
-  margin-top: 50px;
-  width: 150px;
-}
 
 #register {
-  background-color: #0cc;
+  background-color: #fff;
   border: none;
+  width:100%;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative; bottom: 400px;
+  border-radius: 5px;
+  padding: 20px;
 }
 
-
-.background-reg {
-  /*background-image: asset-url("fondo.png", image);*/
-  background-position: 50% 50%;
-  background-repeat:   no-repeat;
-  background-size:     cover;
+#particles {
+  height:500px;
   width: 100%;
-
+  z-index: -1;
 }
+
 
 /*home grids rss elements*/
 .rss {
@@ -106,6 +105,7 @@ a:hover, a:active {
 }
 
 .user {
+  margin:20px;
 }
 
 #nav1 {
@@ -175,3 +175,11 @@ a:hover, a:active {
 
   }
 
+/* User things */
+
+.date {
+  font-size: 12px;
+  font-weight: 500;
+  color: #959595;
+  letter-spacing: 2px;
+}

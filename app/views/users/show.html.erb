@@ -1,0 +1,12 @@
+<h2>Hello <%= @user.email %></h2>
+<hr class="black-line">
+<ul class="list-unstyled">
+  <% @list_of_seenlinks.each do |link| %>
+    <ul class="date list-unstyled"> <%= link.clicked_links.where(user_id: @user.id).first.created_at.strftime("%B %d, %Y") %> 
+    <li> <%= link_to(link.url, link.url) %> </li>
+  <% end %>
+
+</ul>
+
+
+  

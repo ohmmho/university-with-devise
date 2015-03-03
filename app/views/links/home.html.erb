@@ -2,8 +2,8 @@
 <!-- ================================================= -->
 
   <div class="col-md-4">
-    <h3 class="titles-grid text-left">NOTÍCIAS </h3>
-     <hr class="black-line">
+    <h3 class="titles-grid text-right">NOTÍCIAS </h3>
+     <hr class="grey-line">
 
      <div class="dropdown centered">
        <nav class="cl-effect-6">
@@ -24,21 +24,19 @@
     </div>
   
     <br>
-    <ul class="list-unstyled">
-      <% @tagos[0..7].each do |tago| %>
-        <li >
-          <%= link_to( tago.title, leaving_path(tago.id) ) %>
-        </li>
-      <hr>
-      <% end %> 
-    </ul>
+    <% @tagos[0..7].each do |tago| %>
+      <li >
+        <%= link_to( tago.title, leaving_path(tago.id) ) %>
+      </li>
+    <hr>
+    <% end %>
   </div>
   <!-- ================================================= -->
 
 
   <div class="col-md-8">
-    <h3 class="titles-grid text-left">INSPIRACIÓN</h3>
-     <hr class="black-line">
+    <h3 class="titles-grid text-right">INSPIRACIÓN</h3>
+     <hr class="grey-line">
     
    <div class="dropdown centered">
       <nav class="cl-effect-6">
