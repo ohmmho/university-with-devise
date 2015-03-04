@@ -6,9 +6,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     list_of_seenlinks = @user.clicked_links.order("created_at desc").includes(:link)
 
-    @datehash = Hash.new([])
+    @datehash = {}
 
     list_of_seenlinks.each do |clicked_link|
+      @datehash[clicked_link.created_at.strftime("%B %Y, %d")] ||= []
       @datehash[clicked_link.created_at.strftime("%B %Y, %d")] << clicked_link
     end
 
