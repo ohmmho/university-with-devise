@@ -3,8 +3,8 @@
 
   <div class="col-md-4">
     <h3 class="titles-grid text-right">NOTÍCIAS </h3>
-<!--      <hr class="grey-line">
- -->
+     <hr class="grey-line">
+
      <div class="dropdown centered">
        <nav class="cl-effect-6">
           <a href="#" class="dropdown-toggle-3 tago" type="button" id="dropdownMenu1">
@@ -16,21 +16,34 @@
     
         <li class="link-rss title-spaced text-center" role="presentation" data-type="a"><a role="menuitem" tabindex="-1" href="#">TAGO ARTWORK</a></li>
        
-        <li class="link-rss title-spaced text-center" role="presentation" data-type="b"><a role="menuitem" tabindex="-1" href="#">Tago</a></li>
+        <li class="link-rss title-spaced text-center" role="presentation" data-type="b"><a role="menuitem" tabindex="-1" href="#">BRANDEMIA</a></li>
         <li class="link-rss title-spaced text-center" role="presentation" data-type="c"><a role="menuitem" tabindex="-1" href="#">Tago</a></li> 
         <li class="link-rss title-spaced text-center" role="presentation" data-type="d"><a role="menuitem" tabindex="-1" href="#">Tago</a></li>
 
       </ul>
     </div>
-    <ul class="list-unstyled">
-    <br>
-    <% @tagos[0..7].each do |tago| %>
-      <li >
-        <%= link_to( tago.title, leaving_path(tago.id)) %>
-      </li>
-    <hr>
-    <% end %>
-    </ul>
+    <div id="a" class="link-rss-div">
+      <ul class="list-unstyled">
+      <br>
+      <% @tagos[0..7].each do |tago| %>
+        <li >
+          <%= link_to( tago.title, leaving_path(tago.id)) %>
+        </li>
+      <hr>
+      <% end %>
+      </ul>
+    </div>
+    <div id="b" class="link-rss-div">
+      <ul class="list-unstyled">
+      <br>
+      <% @brandemias[0..7].each do |brandemia| %>
+        <li >
+          <%= link_to( brandemia.title, leaving_path(brandemia.id)) %>
+        </li>
+      <hr>
+      <% end %>
+      </ul>
+    </div>
   </div>
   <!-- ================================================= -->
 

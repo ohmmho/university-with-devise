@@ -1,14 +1,28 @@
-<h2>Hello <%= @user.email %></h2>
-<hr class="black-line">
-<ul class="list-unstyled">
-  <% @datehash.each do |date, array_links| %>
-    <ul class="date list-unstyled"> <%= date %>
-    <% array_links.each do |clicked_link| %>
-    <li> <%= link_to(clicked_link.link.url, clicked_link.link.url) %> </li>
-    <% end %>
-  <% end %>
 
-</ul>
+  <div class="col-md-8 col-offset-1">
+    <h3>Hello <%= @user.email %></h3>
+    <hr class="black-line">
+    <ul class="list-unstyled">
+      <% @datehash.each do |date, array_links| %>
+        <ul class="date list-unstyled text-right"> <span class="label label-default"><%= date %></span> </ul>
+        <hr>
 
+        <% array_links.each do |clicked_link| %>
+        <li> <%= link_to(clicked_link.link.url, clicked_link.link.url) %> </li>
+        <% end %>
+      <% end %>
 
+    </ul>
+  </div>  
+  <div class="col-sm-2"></div>
   
+  <div class="col-md-1">
+
+    <div class="row publi-img"></div>
+    <div class="row publi-img"></div>
+    <div class="row publi-img"></div>
+    <div class="row publi-img"></div>
+
+  </div>
+
+

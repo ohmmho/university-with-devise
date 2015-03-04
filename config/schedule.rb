@@ -20,5 +20,7 @@
 # Learn more: http://github.com/javan/whenever
 
 every 2.hours do
-  rake "linkseed:seed_link_db"
+  rake "link_rss:get_link_db"
 end
+
+rake 

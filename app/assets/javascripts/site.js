@@ -61,11 +61,12 @@ var dropdown_ready = function () {
   });
 };
 
+
+// rss change-show inspiración
 var change_name_rss = function(){
   var thing = $("#target-img1").text();
 }
 
-// rss change-show inspiración
 var show_rss_img = function() {
   $('.img-rss').hide();
   $('.img-rss').first().show();
@@ -86,9 +87,24 @@ var show_rss_img = function() {
 
 
 // rss change-show noticias
+var change_name_linkrss = function(){
+  var thingy = $("#target-img").text();
+}
 
 var show_rss_links = function() {
-
+  $('.link-rss-div').hide();
+  $('.link-rss-div').first().show();
+  $("li.link-rss").on("click", function(event){
+    var our_text = event.currentTarget.innerText;
+    $("#target-img").text(our_text);
+    $('.link-rss-div').hide(); 
+      switch($(this).data('type')){
+        case "a": $("#a").show(); break;         
+        case "b": $("#b").show(); break;
+        case "c": $("#c").show(); break;
+        case "d": $("#d").show(); break;
+      };
+   });
 };  
 
 // particles home
@@ -124,7 +140,9 @@ var site_ready = function() {
   dropdown_ready2();
   dropdown_ready();
   show_rss_img();
+  show_rss_links();
   change_name_rss();
+  change_name_linkrss
   particles();
 };
 

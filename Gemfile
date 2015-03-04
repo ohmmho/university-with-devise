@@ -5,7 +5,7 @@ gem 'rails_12factor'
 # Cronjobs
 gem 'whenever', :require => false
 # Pagination
-gem 'kaminari'
+# gem 'kaminari'
 # Bootstrap gem
 gem 'bootstrap-sass', '~> 3.3.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

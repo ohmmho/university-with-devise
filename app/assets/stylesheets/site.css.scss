@@ -25,6 +25,13 @@ a:hover, a:active {
   margin: 0px;
 }
 
+.afooter {
+  margin-left: 0;
+  width:100%;
+  background-color: #0CC;
+  height:20px;
+}
+
 /* preHOME */
 .titulo_class{
   text-align: center;
@@ -186,11 +193,16 @@ a:hover, a:active {
 
   }
 
-/* User things */
+/* Listlinks User things */
 
 .date {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   color: #959595;
   letter-spacing: 2px;
+  padding-top: 20px;
+}
+
+.listlinks{
+  padding:20px;
 }

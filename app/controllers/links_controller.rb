@@ -7,7 +7,7 @@ class LinksController < ApplicationController
     @founds = Link.where(brand: "found").limit(10).order("created_at desc")
     @behances = Link.where(brand: "behance").limit(10).order("created_at desc")
     @awards = Link.where(brand: "awwwards").limit(10).order("created_at desc")
-    
+    @brandemias = Link.where(brand: "brandemia").limit(10).order("created_at desc")
   end
 
   def clicked
