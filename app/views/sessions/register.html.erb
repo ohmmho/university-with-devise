@@ -42,12 +42,22 @@
         <h4 class="modal-title">Yay! Log in again all the times you want!</h4>
       </div>
       <div class="modal-body">
-       <%= form_tag login_path do %>
-         <%= text_field_tag :email, nil, placeholder: "email" %>
-         <%= password_field_tag :password, nil, placeholder: "password" %>
+        <%= form_tag login_path do %>
+          <span class="input input--hoshi">
+            <%= text_field_tag :email, nil, class: "input__field input__field--hoshi" %> 
 
-         <%= submit_tag ("GO") %>
-       <% end %>
+            <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="user_email">
+              <span class="input__label-content input__label-content--hoshi">Email</span>
+            </label>
+          </span>
+          <span class="input input--hoshi">
+            <%= password_field_tag :password, nil, class: "input__field input__field--hoshi" %>      
+            <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="user_password">
+              <span class="input__label-content input__label-content--hoshi">Password</span>
+            </label>
+          </span>
+              <%= submit_tag "Login", class: "btn btn-bai center-block title-spaced" %>
+        <% end %>
       </div>
     </div><!--modal-content -->
   </div><!--modal-dialog  -->
