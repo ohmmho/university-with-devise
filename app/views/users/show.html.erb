@@ -9,7 +9,7 @@
         <hr>
 
         <% array_links.each do |clicked_link| %>
-        <li> <%= link_to(clicked_link.link.url, clicked_link.link.url) %> </li>
+        <li> <%= link_to(clicked_link.link.url, clicked_link.link.url, :target => "_blank") %> </li>
         <% end %>
       <% end %>
 

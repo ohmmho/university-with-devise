@@ -1,9 +1,13 @@
 class LinksController < ApplicationController
 
   def home  
-    
+    #link_rss
     @tagos = Link.where(brand: "tago").order("created_at desc")
     @brandemias = Link.where(brand: "brandemia").order("created_at desc")
+    @mktdirectos = Link.where(brand:"marketingdirecto").order("created_at desc")
+    @desarrollowebs = Link.where(brand: "desarrolloweb").order("created_at desc")
+
+    #img_rss
     @dribles = Link.where(brand: "drible").order("created_at desc")
     @founds = Link.where(brand: "found").order("created_at desc")
     @behances = Link.where(brand: "behance").order("created_at desc")

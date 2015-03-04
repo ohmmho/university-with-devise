@@ -5,31 +5,11 @@ require 'open-uri'
 namespace :link_rss do
   desc "Seed database of links"
   task get_link_db: :environment do
-    @doc = Nokogiri::XML(open('http://www.tagoartwork.com/feed/'))
-    @items = @doc.xpath('//item') 
-    @items_title = @items.xpath('//item//title').map{|title| title.inner_text}
-    @items_link = @items.xpath('//item//link').map{|link| link.inner_text}
 
-    tago_link_title = @items_title.zip(@items_link)
-
-    tago_link_title.each do |item| 
-      Link.create(title: item.first, url: item.last, brand: "tago")
-    end
-
-    #brandemia 
-
-    @doc = Nokogiri::XML(open('http://www.brandemia.org/feed'))
-    @brandemia_i = @doc.xpath('//item')
-    @brandemia_title = @brandemia_i.xpath('//item//title').map{|title| title.inner_text}
-    @brandemia_link = @brandemia_i.xpath('//item//link').map{|link| link.inner_text}
-
-    brandemia_link_title = @brandemia_title.zip(@brandemia_link)
-
-    brandemia_link_title.each do |item|
-      Link.create(title: item.first, url: item.last, brand: "brandemia")
-    end
-
-
+    Link.get_links('http://www.tagoartwork.com/feed/', "tago")
+    Link.get_links('http://www.brandemia.org/feed', "brandemia ")
+    Link.get_links('http://www.marketingdirecto.com/feed/', "marketingdirecto")
+    Link.get_links('http://feeds.feedburner.com/desarrolloweb/novedades-articulos', "desarrolloweb")
     # dribbble
 
     @doc = Nokogiri::XML(open('https://dribbble.com/shots/popular.rss'))

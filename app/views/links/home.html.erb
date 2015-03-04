@@ -17,8 +17,8 @@
         <li class="link-rss title-spaced text-center" role="presentation" data-type="a"><a role="menuitem" tabindex="-1" href="#">TAGO ARTWORK</a></li>
        
         <li class="link-rss title-spaced text-center" role="presentation" data-type="b"><a role="menuitem" tabindex="-1" href="#">BRANDEMIA</a></li>
-        <li class="link-rss title-spaced text-center" role="presentation" data-type="c"><a role="menuitem" tabindex="-1" href="#">Más cosas en proceso</a></li> 
-        <li class="link-rss title-spaced text-center" role="presentation" data-type="d"><a role="menuitem" tabindex="-1" href="#">Más cosas en proceso</a></li>
+        <li class="link-rss title-spaced text-center" role="presentation" data-type="c"><a role="menuitem" tabindex="-1" href="#">MARKETING DIRECTO</a></li> 
+        <li class="link-rss title-spaced text-center" role="presentation" data-type="d"><a role="menuitem" tabindex="-1" href="#">DESARROLLO WEB</a></li>
 
       </ul>
     </div>
@@ -27,7 +27,7 @@
       <br>
       <% @tagos.each do |tago| %>
         <li >
-          <%= link_to( tago.title, leaving_path(tago.id)) %>
+          <%= link_to( tago.title, leaving_path(tago.id), :target => "_blank") %>
         </li>
       <hr>
       <% end %>
@@ -38,13 +38,39 @@
       <br>
       <% @brandemias.each do |brandemia| %>
         <li >
-          <%= link_to( brandemia.title, leaving_path(brandemia.id)) %>
+          <%= link_to( brandemia.title, leaving_path(brandemia.id), :target => "_blank") %>
+        </li>
+      <hr>
+      <% end %>
+      </ul>
+    </div>
+
+    <div id="c" class="link-rss-div">
+      <ul class="list-unstyled">
+      <br>
+      <% @mktdirectos.each do |mktdirecto| %>
+        <li >
+          <%= link_to( mktdirecto.title, leaving_path(mktdirecto.id), :target => "_blank") %>
+        </li>
+      <hr>
+      <% end %>
+      </ul>
+    </div>
+
+    <div id="d" class="link-rss-div">
+      <ul class="list-unstyled">
+      <br>
+      <% @desarrollowebs.each do |desarrolloweb| %>
+        <li >
+          <%= link_to( desarrolloweb.title, leaving_path(desarrolloweb.id), :target => "_blank") %>
         </li>
       <hr>
       <% end %>
       </ul>
     </div>
   </div>
+
+
   <!-- ================================================= -->
 
 
