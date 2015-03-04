@@ -25,7 +25,7 @@
     <div id="a" class="link-rss-div">
       <ul class="list-unstyled">
       <br>
-      <% @tagos[0..7].each do |tago| %>
+      <% @tagos.each do |tago| %>
         <li >
           <%= link_to( tago.title, leaving_path(tago.id)) %>
         </li>
@@ -36,7 +36,7 @@
     <div id="b" class="link-rss-div">
       <ul class="list-unstyled">
       <br>
-      <% @brandemias[0..7].each do |brandemia| %>
+      <% @brandemias.each do |brandemia| %>
         <li >
           <%= link_to( brandemia.title, leaving_path(brandemia.id)) %>
         </li>
@@ -54,7 +54,7 @@
     
    <div class="dropdown centered">
       <nav class="cl-effect-6">
-        <a href="#" class="dropdown-toggle-bis" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">
+        <a href="#" class="dropdown-toggle-bis tago" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">
          <h4 id="target-img1" class="titles-grid"> DRIBBBLE </h4>
         </a>
       </nav>
@@ -71,7 +71,7 @@
 
     <div id="1" class="img-rss">
       <ul class="list-group row ">
-        <% @dribles[0..8].each do |drible| %>
+        <% @dribles.each do |drible| %>
           <li class= "list-group-item list-grid col-xs-4">
           <a href=" <%= leaving_path(drible.id) %>" target="_blank">
             <img src="<%= drible.img_url %>" class="img-responsive center-block img-grid">
@@ -83,7 +83,7 @@
 
     <div id="2" class="img-rss">
       <ul class="list-group row">
-        <% @founds[0..8].each do |found| %>
+        <% @founds.each do |found| %>
           <li class= "list-group-item list-grid col-xs-4">
           <a href="<%= leaving_path(found.id) %>" target="_blank"> <div class="found-img center-block" style="background-image:url('<%= found.img_url %>');"></div>
             </a>
@@ -94,7 +94,7 @@
 
     <div id="3" class="img-rss">
       <ul class="list-group row">
-        <% @behances[0..8].each do |behance| %>
+        <% @behances.each do |behance| %>
           <li class= "list-group-item list-grid col-xs-4">
           <a href="<%= leaving_path(behance.id) %>" target="_blank">
             <img src="<%= behance.img_url %>" class="img-responsive center-block img-grid">
@@ -106,7 +106,7 @@
 
     <div id="4" class="img-rss">
       <ul class="list-group row">
-        <% @awards[0..8].each do |award| %>
+        <% @awards.each do |award| %>
           <li class= "list-group-item list-grid col-xs-4">
             <a href="<%= leaving_path(award.id) %>" target="_blank">
               <img  src="<%= award.img_url %>" class="img-responsive center-block img-grid" >

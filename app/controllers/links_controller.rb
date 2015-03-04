@@ -2,12 +2,12 @@ class LinksController < ApplicationController
 
   def home  
     
-    @tagos = Link.where(brand: "tago").limit(10).order("created_at desc")
-    @dribles = Link.where(brand: "drible").limit(10).order("created_at desc")
-    @founds = Link.where(brand: "found").limit(10).order("created_at desc")
-    @behances = Link.where(brand: "behance").limit(10).order("created_at desc")
-    @awards = Link.where(brand: "awwwards").limit(10).order("created_at desc")
-    @brandemias = Link.where(brand: "brandemia").limit(10).order("created_at desc")
+    @tagos = Link.where(brand: "tago").order("created_at desc")
+    @brandemias = Link.where(brand: "brandemia").order("created_at desc")
+    @dribles = Link.where(brand: "drible").order("created_at desc")
+    @founds = Link.where(brand: "found").order("created_at desc")
+    @behances = Link.where(brand: "behance").order("created_at desc")
+    @awards = Link.where(brand: "awwwards").order("created_at desc")
   end
 
   def clicked
