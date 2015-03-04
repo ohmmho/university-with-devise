@@ -1,8 +1,12 @@
 source 'https://rubygems.org'
 
+# Heroku deploy
 gem 'rails_12factor'
+# Cronjobs
 gem 'whenever', :require => false
-#Bootstrap gem
+# Pagination
+gem 'kaminari'
+# Bootstrap gem
 gem 'bootstrap-sass', '~> 3.3.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'

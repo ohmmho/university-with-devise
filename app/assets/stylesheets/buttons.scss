@@ -8,6 +8,7 @@
 }
 
 .cl-effect-6 a {
+  
   margin: 0px;
   padding: 10px;
   position: relative;
@@ -22,6 +23,22 @@
   font-size: 1.35em;
 }
 
+
+.cl-effect-6 a.tago {
+  width:376px;
+  margin: 0px;
+  padding: 10px;
+  position: relative;
+  display: inline-block;
+  margin: 15px 0px;
+  outline: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  font-size: 1.35em;
+}
 .cl-effect-6 a::before {
   position: absolute;
   background: #0CC;
