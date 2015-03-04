@@ -5,7 +5,7 @@
     <hr class="black-line">
     <ul class="list-unstyled">
       <% @datehash.each do |date, array_links| %>
-        <ul class="date list-unstyled text-right listlinks"> <span class="label label-default"><%= date %></span> </ul>
+        <ul class="date list-unstyled text-right listlinks"> <span class="label label-default labelblack"><%= date %></span> </ul>
         <hr>
 
         <% array_links.each do |clicked_link| %>
@@ -16,15 +16,19 @@
     </ul>
     </div>
   </div>  
-  <div class="col-sm-2"></div>
+  <div class="col-sm-1"></div>
+  <!-- ad sidebar -->
+  <div class="col-md-2 publi-img-grid" >
   
-  <div class="col-md-1">
-
-    <div class="row publi-img"></div>
-    <div class="row publi-img"></div>
-    <div class="row publi-img"></div>
-    <div class="row publi-img"></div>
+    <div><img src="/assets/a2.jpg" class= "img-publi">
+    </div>
+    <div><img src="/assets/a1.jpg" class= "img-publi">
+    </div>
+    <div><img src="/assets/a5.jpg" class= "img-publi"></div>
+    <div><img src="/assets/a3.jpg" class= "img-publi"></div>
 
   </div>
+
+  
 
 

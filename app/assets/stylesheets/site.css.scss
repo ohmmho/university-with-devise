@@ -169,17 +169,6 @@ a:hover, a:active {
 
 /* category: DISEÑO */
 
-.publi-img {
-    background-image: url("/assets/UON.png");
-    position: relative;
-    float: left;
-    width:  200px;
-    height: 150px;
-    background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     cover;
-  }
-
   .category-col {
    height: 300px;
    
@@ -220,3 +209,67 @@ a:hover, a:active {
   margin:20px;
 }
 
+.labelblack {
+  background-color: #000;
+}
+
+.bai-span {
+  color: #0cc;
+}
+
+/* Advertisment class */
+
+.publi-img1 {
+  background-image: url("/assets/a1.jpg");
+  position: relative;
+  float: left;
+  width:  250px;
+  height: 200px;
+  background-position: 50% 50%;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+}
+
+.publi-img2 {
+  background-image: url("/assets/a2.jpg");
+  position: relative;
+  float: left;
+  width:  250px;
+  height: 200px;
+  background-position: 50% 50%;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+  
+}
+.publi-img3 {
+  background-image: url("/assets/a3.jpg");
+  position: relative;
+  float: left;
+  width:  250px;
+  height: 200px;
+  background-position: 50% 50%;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+}
+
+.publi-img4 {
+  background-image: url("/assets/a5.jpg");
+  position: relative;
+  float: left;
+  width:  250px;
+  height: 200px;
+  background-position: 50% 50%;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+}
+
+.img-publi {
+   width:  300px;
+}
+
+.img-publi-md {
+   width:  220px;
+}
+.publi-img-grid {
+  margin-top:10%;
+}
