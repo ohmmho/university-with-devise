@@ -203,13 +203,20 @@ a:hover, a:active {
 /* Listlinks User things */
 
 .date {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: #959595;
   letter-spacing: 2px;
   padding-top: 20px;
+  margin-bottom:0px;
 }
 
 .listlinks{
   padding:20px;
 }
+
+.padding-row{
+  padding:20px;
+  margin:20px;
+}
+
