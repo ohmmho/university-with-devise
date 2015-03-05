@@ -6,6 +6,7 @@ class Link < ActiveRecord::Base
 
   validates :url, uniqueness: true
 
+  after_create :squish_url
 
   def self.get_links(url, brand)
     @doc = Nokogiri::XML(open(url))
@@ -23,5 +24,10 @@ class Link < ActiveRecord::Base
   def get_images(img_array, brand)
     #TODO
   end
+
+  private
+    def squish_url
+      update_attributes(url: url.squish)
+    end
 end
 
