@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.2.0"
 # Heroku deploy
 gem 'rails_12factor'
 # Cronjobs
@@ -35,7 +35,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'pundit'
 
 # Use Unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -63,7 +63,7 @@ group :development do
   gem 'annotate'
   gem 'better_errors'
   gem 'binding_of_caller'
-
-
 end
+
+gem 'puma'
 
