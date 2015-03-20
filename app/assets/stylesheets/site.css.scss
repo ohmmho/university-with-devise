@@ -136,6 +136,8 @@ a:hover, a:active {
 #nav1 {
   height: 65px;
   margin:0px;
+  background-color: #fff;
+  border: none;
 }
 
 #nav2{
@@ -189,7 +191,11 @@ a:hover, a:active {
 
   }
 
-/* Listlinks User things */
+  .info {
+    color: #959595;
+  }
+
+/* Listlinks & User things */
 
 .date {
   font-size: 16px;
@@ -272,4 +278,15 @@ a:hover, a:active {
 }
 .publi-img-grid {
   margin-top:10%;
+}
+
+.margin-left {
+  margin-left: 10px;
+  
+}
+
+.bailabel {
+  color: #0cc;
+  border: 1px solid #0cc;
+  background-color: #fff;
 }

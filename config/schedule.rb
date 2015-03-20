@@ -22,5 +22,3 @@
 every 2.hours do
   rake "link_rss:get_link_db"
 end
-
-rake 

@@ -15,8 +15,10 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#logout'
 
   get '/diseño', to: 'categories#diseño'
+  get '/marketing', to: 'categories#marketing'
+  get '/publicidad', to: 'categories#publicidad'
+  get '/desarrollo', to: 'categories#desarrollo'
 
-  # post '/links/:link_id/clicked', to: 'clikedLinks#create'
 
   resources :users
 
