@@ -103,6 +103,7 @@ var show_rss_links = function() {
         case "b": $("#b").show(); break;
         case "c": $("#c").show(); break;
         case "d": $("#d").show(); break;
+        case "e": $("#e").show(); break;
       };
    });
 };  

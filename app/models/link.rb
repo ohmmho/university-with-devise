@@ -21,9 +21,7 @@ class Link < ActiveRecord::Base
     end
   end
 
-  def get_images(img_array, brand)
-    #TODO
-  end
+
 
   private
     def squish_url

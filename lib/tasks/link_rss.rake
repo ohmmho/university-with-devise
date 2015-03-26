@@ -6,9 +6,25 @@ namespace :link_rss do
   task get_link_db: :environment do
 
     Link.get_links('http://www.tagoartwork.com/feed/', "tago")
-    Link.get_links('http://www.brandemia.org/feed', "brandemia ")
+    # Link.get_links('http://www.brandemia.org/feed/', "brandemia")
     Link.get_links('http://www.marketingdirecto.com/feed/', "marketingdirecto")
     Link.get_links('http://feeds.feedburner.com/desarrolloweb/novedades-articulos', "desarrolloweb")
+    Link.get_links('http://www.smashingmagazine.com/feed/', "smashingmagazine")
+
+   
+    # brandemia
+
+  
+      @doc = Nokogiri::XML(open('http://www.brandemia.org/feed'))
+      @brandemia_i = @doc.xpath('//item')
+      @brandemia_title = @brandemia_i.xpath('//item//title').map{|title|title.inner_text}
+      @brandemia_link = @brandemia_i.xpath('//item//link').map{|link| link.inner_text}
+      brandemia_link_title = @brandemia_title.zip(@brandemia_link)
+      brandemia_link_title.each do |brandemia| 
+        Link.create(title: brandemia.first, url: brandemia.last, brand: "brandemia")
+      end   
+
+
     # dribbble
 
     @doc = Nokogiri::XML(open('https://dribbble.com/shots/popular.rss'))
@@ -59,7 +75,6 @@ namespace :link_rss do
       @awards_i = @doc.xpath('//item') 
       @awards_link = @awards_i.xpath('//item//link').map {|link| link.next_sibling}
       @awards_img = @awards_i.children[3].children[1].xpath('//img').map{ |item| item['src'] }
-
       awards_link_img = @awards_link.zip(@awards_img)
 
       awards_link_img.each do |item|

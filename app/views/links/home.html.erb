@@ -19,6 +19,7 @@
         <li class="link-rss title-spaced text-center" role="presentation" data-type="b"><a role="menuitem" tabindex="-1" href="#">BRANDEMIA</a></li>
         <li class="link-rss title-spaced text-center" role="presentation" data-type="c"><a role="menuitem" tabindex="-1" href="#">MARKETING DIRECTO</a></li> 
         <li class="link-rss title-spaced text-center" role="presentation" data-type="d"><a role="menuitem" tabindex="-1" href="#">DESARROLLO WEB</a></li>
+        <li class="link-rss title-spaced text-center" role="presentation" data-type="e"><a role="menuitem" tabindex="-1" href="#">SMASHING MAGAZINE</a></li>
 
       </ul>
     </div>
@@ -36,7 +37,7 @@
     <div id="b" class="link-rss-div">
       <ul class="list-unstyled">
       <br>
-      <% @brandemias.each do |brandemia| %>
+      <% @brandemiasy.each do |brandemia| %>
         <li >
           <%= link_to( brandemia.title, leaving_path(brandemia.id), :target => "_blank") %>
         </li>
@@ -63,6 +64,18 @@
       <% @desarrollowebs.each do |desarrolloweb| %>
         <li >
           <%= link_to( desarrolloweb.title, leaving_path(desarrolloweb.id), :target => "_blank") %>
+        </li>
+      <hr>
+      <% end %>
+      </ul>
+    </div>
+
+    <div id="e" class="link-rss-div">
+      <ul class="list-unstyled">
+      <br>
+      <% @smashings.each do |smashing| %>
+        <li >
+          <%= link_to( smashing.title, leaving_path(smashing.id), :target => "_blank") %>
         </li>
       <hr>
       <% end %>

@@ -19,6 +19,8 @@
 
 # Learn more: http://github.com/javan/whenever
 
+# REMEMBER: After setting up the rake task => run on terminal: whenever --update-crontab
+
 every 2.hours do
   rake "link_rss:get_link_db"
 end
