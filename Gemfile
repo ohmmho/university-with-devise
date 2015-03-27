@@ -37,6 +37,12 @@ gem 'pundit'
 # Use Unicorn as the app server
 gem 'unicorn'
 
+# User FACEBOOK authentication
+
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
