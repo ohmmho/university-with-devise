@@ -39,7 +39,6 @@ gem 'unicorn'
 
 # User FACEBOOK authentication
 
-gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 
